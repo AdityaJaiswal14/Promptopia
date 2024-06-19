@@ -9,8 +9,9 @@ const UpdatePrompt = () => {
   const router = useRouter();
   <Suspense>
   const searchParams = useSearchParams();
-  </Suspense>
   const promptId = searchParams.get("id");
+  </Suspense>
+
 
   const [post, setPost] = useState({ prompt: "", tag: "", });
   const [submitting, setIsSubmitting] = useState(false);
