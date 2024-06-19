@@ -1,5 +1,5 @@
 "use client";
-
+import { Suspense } from 'react'
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -7,7 +7,9 @@ import Form from "@components/Form";
 
 const UpdatePrompt = () => {
   const router = useRouter();
+  <Suspense>
   const searchParams = useSearchParams();
+  </Suspense>
   const promptId = searchParams.get("id");
 
   const [post, setPost] = useState({ prompt: "", tag: "", });
